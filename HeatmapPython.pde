@@ -1,6 +1,6 @@
 int SAMPLES = 4096; //must be the amount of lines in the file, just use sublime or notepad++.
 
-boolean makePic = true;
+boolean makePic = false;
 
 String[] info = new String[SAMPLES];
 float[] data = new float[SAMPLES];
@@ -66,15 +66,6 @@ void draw()
           lx = j;
           ly = i;
         }
-        
-    /*    if(data[(j*256)+i] > 0) //just some mucking around with some values
-        {
-          fill(0,190,(1-((data[(j*256)+i]/highest)))*255);
-        }
-        else if(data[(j*256)+i] <= 0)
-        {
-          fill(180,190,(1-((data[(j*256)+i]/highest)))*255);
-        } */
         
         fill(0,190,(1-((data[(j*256)+i]/highest)))*255); //drawing the rectangles
         
